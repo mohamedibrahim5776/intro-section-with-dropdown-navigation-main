@@ -1,0 +1,227 @@
+* {
+    font-family: 'Epilogue', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+:root {
+    --Almost-White: hsl(0, 0%, 98%);
+    --Medium-Gray: hsl(0, 0%, 41%); 
+    --Almost-Black: hsl(0, 0%, 8%);
+}
+li {
+    list-style: none;
+}
+.none {
+    display: none;
+}
+.container {
+    display: grid;
+    margin: 30px 0;
+    position: relative;
+    width: 100vw;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px;
+}
+.elements {
+    position: absolute;
+    right: 0px;
+    top: -33px;
+    width: 65vw;
+    height: 121vh;
+    background-color: var(--Almost-White);
+    z-index: 4;
+    padding: 80px 20px;
+    color: var(--Medium-Gray);
+}
+.login li:hover , .elements li:hover {
+    color: black;
+}
+.login {
+    text-align: center;
+    z-index: 10;
+    position: relative;
+    left: -130px;
+    top: -10px;
+    color: var(--Medium-Gray);
+    display: none;
+}
+.login li:nth-child(1) {
+    margin-bottom: 10px;
+}
+.login li:nth-child(2) {
+    border: 1px solid var(--Medium-Gray);
+    padding: 15px;
+    border-radius: 20px;
+}
+.login li:nth-child(2):hover {
+    border: 1px solid var(--Medium-Gray);
+}
+.elements li {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+.arrow {
+    background-image: url(../images/icon-arrow-down.svg);
+    background-size: cover;
+    height: 6px;
+    width: 10px;
+    top: -13px;
+    right: -85px;
+    position: relative;
+}
+.arrowReverse {
+    background-image: url(../images/icon-arrow-up.svg);
+}
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.cover {
+    position: absolute;
+    right: 0;
+    top: -30px;
+    width: 100vw;
+    height: 120vh;
+    background-color: rgba(0, 0, 0, 0.345);
+}
+.elements li li {
+    display: flex;
+    margin: 30px 0 20px 30px ;
+    color: black;
+}
+.elements li li img {
+    margin-right: 10px
+}
+.content .mainPhoto {
+    background-image: url(../images/image-hero-mobile.png);
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 60px;
+}
+.content h1 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+.content p {
+    text-align: center;
+    color: var(--Medium-Gray);
+    line-height: 29px;
+    padding: 0 20px;
+}
+.content button {
+    margin: 20px auto 60px;
+    display: block;
+    background-color: var(--Almost-Black);
+    color: var(--Almost-White);
+    padding: 15px 20px;
+    border: none;
+    border-radius: 15px;
+}
+button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+.content .images {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 60px;
+}
+.images img {
+    width: 60px;
+}
+@media (min-width:567px) {
+    .container {
+        margin: 30px;
+    }
+    .elements {
+        display: flex;
+        position: inherit; 
+        width: auto;
+        padding: 0;
+        height: auto;
+        align-items: center;
+    }
+    .elements  li {
+        margin: 0 40px;
+    }
+    .elements  li li {
+        margin: 0 ;
+        padding: 10px 20px;
+    }
+    .elements  li ul  {
+        position: absolute; 
+        margin-top: 10px ; 
+        padding-top: 10px ; 
+        background-color: rgb(237, 237, 237);
+        left: 155px;    
+        /* display: none;    */
+    }
+    .elements  li:nth-child(3) ul{
+        left: 340px;       
+    }
+    .left {
+        display: flex;
+        justify-content: space-between;
+    }
+    .right {
+        display: flex;
+        justify-content: space-between;
+    }
+    .close {
+        display: none;
+    }
+    .login {
+        display: flex;
+        align-items: center;
+        position: inherit;
+    }
+    .login li {
+        margin: 0 10px;
+    }
+    .menu {
+        display: none;
+    }
+    .content {
+        display: flex;
+        flex-direction: row-reverse; 
+    }
+    .content .mainPhoto {
+        background-image: url(../images/image-hero-desktop.png);
+        height: 100%;
+        background-size: contain;
+        width: 50%;
+        background-repeat: no-repeat;
+        display: block;
+        margin: 50 auto 0;
+        margin-top: 20px;
+    }
+    .txt {
+        margin: 100px 100px 0px 189px;
+    }
+    .txt p {
+        text-align: left;
+        padding: 0;
+        font-size:18px ;
+        line-height: 40px;
+        margin-bottom: 50px;
+    }
+    .txt h1 {
+        text-align: left;
+        margin-bottom: 60px;
+        font-size: 55px;
+        margin-right:80px;
+    }
+    .content button {
+        margin-left: 0;
+    }
+}
